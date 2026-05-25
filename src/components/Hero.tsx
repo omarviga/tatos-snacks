@@ -50,17 +50,21 @@ export default function Hero() {
       <div className="container mx-auto px-6 relative z-10 text-center space-y-8">
         {/* Banner Announcement */}
         <div className="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-white text-xs font-black uppercase tracking-wider border-2 border-tatos-dark animate-bounce shadow">
-          🔥 NUEVOS MEZCLADOS JUST DROPPED!
+          🔥 ¡NUEVOS PACKS DE TEMPORADA DISPONIBLES!
         </div>
 
         {/* Jumbo Headline */}
-        <h1 className="font-headline text-5xl sm:text-7xl md:text-[80px] font-black text-tatos-dark leading-none uppercase tracking-tight">
-          Pop Till <br />
-          <span className="text-flamin-orange relative inline-block">
-            You Drop.
+        <h1 className="font-headline text-4xl sm:text-6xl md:text-[76px] font-black text-tatos-dark leading-none uppercase tracking-tight max-w-4xl mx-auto">
+          Palomitas Artesanales <br />
+          <span className="text-secondary relative inline-block">
+            con el Crujido Perfecto.
             <span className="absolute left-0 bottom-1 w-full h-3 bg-primary-container/40 -z-10 rounded" />
           </span>
         </h1>
+
+        <p className="max-w-xl mx-auto text-on-surface-variant font-sans text-sm md:text-base leading-relaxed text-tatos-dark/85">
+          Maíz selecto estallado artesanalmente, ingredientes 100% gourmet y un glaseado crujiente sin precedentes. Elevamos tus snacks favoritos a otro nivel para tus mejores momentos.
+        </p>
 
         {/* Big Products presentation overlapping row */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto pt-8">
@@ -78,7 +82,7 @@ export default function Hero() {
             />
             {/* Tag Sticker */}
             <div className="absolute -top-3 -right-3 bg-primary-container text-on-primary-container text-xs font-black px-4 py-1.5 rounded-xl border-2 border-tatos-dark shadow-md rotate-12 select-none uppercase tracking-wider">
-              SWEET!
+              ¡DULCE GLASÉ!
             </div>
           </motion.div>
 
@@ -96,7 +100,7 @@ export default function Hero() {
             />
             {/* Trigger Central Tag */}
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-flamin-orange text-white text-xs font-black px-6 py-2 rounded-full border-2 border-tatos-dark shadow-lg -rotate-2 select-none uppercase tracking-widest whitespace-nowrap">
-              SPICY AS HELL
+              ¡FUEGO INTENSO!
             </div>
           </motion.div>
 
@@ -114,19 +118,32 @@ export default function Hero() {
             />
             {/* Tag Sticker */}
             <div className="absolute -top-3 -left-3 bg-butter-cream text-primary text-xs font-black px-4 py-1.5 rounded-xl border-2 border-tatos-dark shadow-md -rotate-12 select-none uppercase tracking-wider">
-              CLASSIC
+              MANTEQUILLA GOURMET
             </div>
           </motion.div>
         </div>
 
         {/* Call to action Explore Button */}
-        <div className="pt-10 flex justify-center">
+        <div className="pt-10 flex flex-col sm:flex-row justify-center items-center gap-4 max-w-md mx-auto">
           <button
             onClick={handleScrollToFlavors}
-            className="group bg-[#2b1b17] hover:bg-secondary text-white font-headline text-sm md:text-base font-black px-10 py-5 rounded-2xl tatos-btn-shadow flex items-center gap-3 uppercase tracking-wider cursor-pointer"
+            className="group bg-[#2b1b17] hover:bg-secondary text-white font-headline text-xs md:text-sm font-black px-8 py-4.5 rounded-2xl tatos-btn-shadow flex items-center justify-center gap-3 uppercase tracking-wider cursor-pointer w-full transition-all"
           >
-            EXPLORE FLAVORS
-            <ArrowRight size={20} className="transition-transform group-hover:translate-x-2 stroke-[2.5]" />
+            Ver Sabores Gourmet
+            <ArrowRight size={18} className="transition-transform group-hover:translate-x-1.5 stroke-[2.5]" />
+          </button>
+          <button
+            onClick={() => {
+              const b = document.getElementById('bundles-interactive');
+              if (b) {
+                b.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                document.getElementById('bundles')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="bg-white hover:bg-butter-cream text-tatos-dark font-headline text-xs md:text-sm font-black px-8 py-4.5 rounded-2xl border-2 border-tatos-dark hover:border-black transition-all uppercase tracking-wider cursor-pointer w-full flex items-center justify-center gap-2"
+          >
+            🍿 Armar Combo
           </button>
         </div>
       </div>

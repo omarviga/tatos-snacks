@@ -31,34 +31,42 @@ export default function Navbar({ onCartOpen, cartCount }: NavbarProps) {
       </div>
 
       {/* Desktop navigation tabs */}
-      <div className="hidden md:flex gap-8 items-center">
+      <div className="hidden md:flex gap-6 items-center">
         <a
           onClick={(e) => handleScrollToSegment('flavors', e)}
           href="#flavors"
           className="text-tatos-dark font-headline text-xs font-black uppercase tracking-wider hover:text-flamin-orange transition-colors"
         >
-          Flavors
+          Sabores
         </a>
         <a
           onClick={(e) => handleScrollToSegment('bundles-interactive', e)}
           href="#bundles-interactive"
           className="text-tatos-dark font-headline text-xs font-black uppercase tracking-wider hover:text-flamin-orange transition-colors"
         >
-          Custom Bundle
+          Arma tu Combo
         </a>
         <a
           onClick={(e) => handleScrollToSegment('soulmate-finder', e)}
           href="#soulmate-finder"
           className="text-tatos-dark font-headline text-xs font-black uppercase tracking-wider hover:text-flamin-orange transition-colors"
         >
-          Match Maker
+          Descubrir Sabor
         </a>
         <a
           onClick={(e) => handleScrollToSegment('simulator', e)}
           href="#simulator"
           className="text-tatos-dark font-headline text-xs font-black uppercase tracking-wider hover:text-flamin-orange transition-colors"
         >
-          Simulator
+          Simulador Popcorn
+        </a>
+        <a
+          id="wholesale-link"
+          onClick={(e) => handleScrollToSegment('mayoreo', e)}
+          href="#mayoreo"
+          className="text-[#bd6443] font-headline text-xs font-black uppercase tracking-wider hover:text-primary transition-colors bg-secondary-fixed/50 px-2.5 py-1 rounded-lg border border-tatos-dark/10"
+        >
+          Mayoreo B2B
         </a>
       </div>
 
@@ -83,7 +91,7 @@ export default function Navbar({ onCartOpen, cartCount }: NavbarProps) {
           onClick={(e) => handleScrollToSegment('flavors', e)}
           className="bg-primary text-white border-2 border-tatos-dark px-5 py-2.5 rounded-full font-headline text-xs font-black uppercase tatos-btn-shadow hover:bg-primary-container hover:text-on-primary-container transition-all"
         >
-          Shop Now
+          ¡Comprar Ya! 🍿
         </button>
       </div>
     </nav>

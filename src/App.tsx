@@ -12,6 +12,7 @@ import Bundler from './components/Bundler';
 import SocialProof from './components/SocialProof';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
+import B2BStory from './components/B2BStory';
 import { Sparkles, ShoppingBag, ArrowRight, ChevronDown } from 'lucide-react';
 
 export default function App() {
@@ -396,6 +397,9 @@ export default function App() {
             </div>
           </div>
         </section>
+
+        {/* Our Story & Wholesale B2B Segment */}
+        <B2BStory />
 
       </main>
 

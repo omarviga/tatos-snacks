@@ -12,6 +12,9 @@ export interface Product {
   badgeBgClass?: string;
   iconName?: string;
   iconColorClass?: string;
+  ingredients?: string[];
+  nutrition?: Record<string, string>;
+  sensoryDescription?: string;
 }
 
 export interface CartItem {
