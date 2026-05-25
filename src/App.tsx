@@ -13,6 +13,7 @@ import SocialProof from './components/SocialProof';
 import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
 import B2BStory from './components/B2BStory';
+import CrossSelling from './components/CrossSelling';
 import { Sparkles, ShoppingBag, ArrowRight, ChevronDown } from 'lucide-react';
 
 export default function App() {
@@ -159,7 +160,7 @@ export default function App() {
       <main className="space-y-0">
         
         {/* Landing header Section */}
-        <Hero />
+        <Hero onAddToCart={handleAddToCart} />
 
         {/* Individual Flavors Grid Section */}
         <section id="flavors" className="py-24 bg-surface-container border-t-2 border-b-2 border-tatos-dark relative">
@@ -400,6 +401,9 @@ export default function App() {
 
         {/* Our Story & Wholesale B2B Segment */}
         <B2BStory />
+
+        {/* Completa tu Combo Cross-selling Segment */}
+        <CrossSelling onAddToCart={handleAddToCart} />
 
       </main>
 
