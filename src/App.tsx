@@ -4,6 +4,7 @@ import { Product, CartItem } from './types';
 import { PRODUCTS } from './data';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import ProductHero from './components/ProductHero';
 import FlavorCard from './components/FlavorCard';
 import InteractiveShowcase from './components/InteractiveShowcase';
 import PopcornEngine from './components/PopcornEngine';
@@ -161,6 +162,9 @@ export default function App() {
         
         {/* Landing header Section */}
         <Hero onAddToCart={handleAddToCart} />
+
+        {/* Dynamic Immersive Flavor Experience Shelf */}
+        <ProductHero onAddToCart={handleAddToCart} />
 
         {/* Individual Flavors Grid Section */}
         <section id="flavors" className="py-24 bg-surface-container border-t-2 border-b-2 border-tatos-dark relative">
