@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #785900;
+  --color-primary-container: #ffc107;
+  --color-on-primary-container: #6d5100;
+  
+  --color-secondary: #b6171e;
+  --color-secondary-container: #da3433;
+  --color-on-secondary-container: #fffbff;
+  
+  --color-flamin-orange: #ff5722;
+  --color-butter-cream: #fff9c4;
+  --color-tatos-dark: #2b1b17;
+  
+  --color-surface-dim: #e4d9c8;
+  --color-surface: #fff8f2;
+  --color-surface-container: #f8ecdb;
+  --color-surface-container-low: #fef2e1;
+  --color-surface-container-high: #f2e7d6;
+  --color-surface-container-highest: #ece1d0;
+  --color-on-surface: #201b11;
+  --color-on-surface-variant: #4f4632;
+  --color-outline: #827660;
+
+  --font-sans: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-headline: "Plus Jakarta Sans", "Inter", sans-serif;
+  
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 40s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-16px) rotate(4deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+}
+
+/* Custom helper classes */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tatos-btn-shadow {
+  box-shadow: 0 4px 0 0 #2b1b17;
+  transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tatos-btn-shadow:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 #2b1b17;
+}
+
+.tatos-card-shadow {
+  box-shadow: 0 8px 0 0 #2b1b17;
+}
+
+.tatos-popup-shadow {
+  box-shadow: 8px 8px 0 0 #2b1b17;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff8f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #827660;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2b1b17;
+}

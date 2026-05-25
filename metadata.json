@@ -1,0 +1,6 @@
+{
+  "name": "Tatos Snacks",
+  "description": "An immersive, high-energy interactive snack landing page and shopping experience for Tatos Snacks, featuring interactive custom flavor bundles, a flavor-matching quiz, dynamic popcorn-popping simulator, and integrated shopping cart.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
